@@ -1,0 +1,130 @@
+{
+  "premier_league": [
+    {
+      "achievement": "All-time Premier League top scorer with over 200 goals.",
+      "name": "Alan Shearer"
+    },
+    {
+      "achievement": "Manchester United legend who won multiple titles and was top scorer in 2008.",
+      "name": "Cristiano Ronaldo"
+    },
+    {
+      "achievement": "Liverpool forward who won the Golden Boot multiple times and broke the 38-game season scoring record.",
+      "name": "Mohamed Salah"
+    },
+    {
+      "achievement": "Manchester City star midfielder known for world-class assists and multiple Premier League titles.",
+      "name": "Kevin De Bruyne"
+    },
+    {
+      "achievement": "Arsenal legend and record goal scorer, led club to unbeaten season in 2003–04.",
+      "name": "Thierry Henry"
+    },
+    {
+      "achievement": "Chelsea striker who won multiple Premier League titles and scored over 100 league goals.",
+      "name": "Didier Drogba"
+    },
+    {
+      "achievement": "Tottenham striker who became one of the all-time Premier League top scorers.",
+      "name": "Harry Kane"
+    },
+    {
+      "achievement": "Manchester United midfielder who scored the winning goal in the 1999 Champions League final.",
+      "name": "Ole Gunnar Solskjaer"
+    },
+    {
+      "achievement": "Chelsea midfielder who became the club's all-time top scorer.",
+      "name": "Frank Lampard"
+    },
+    {
+      "achievement": "Liverpool captain who led the club to the 2005 Champions League final victory.",
+      "name": "Steven Gerrard"
+    }
+  ],
+
+  "tennis": [
+    {
+      "achievement": "Won 20 Grand Slams and dominated men's tennis between 2003 and 2012.",
+      "name": "Roger Federer"
+    },
+    {
+      "achievement": "Holds the men's record for most Grand Slam titles with 24.",
+      "name": "Novak Djokovic"
+    },
+    {
+      "achievement": "King of Clay with 14 French Open titles and over 20 Grand Slams.",
+      "name": "Rafael Nadal"
+    },
+    {
+      "achievement": "US Open champion in 2018 and 2020, known for powerful baseline play.",
+      "name": "Naomi Osaka"
+    },
+    {
+      "achievement": "Won Wimbledon in 2013 and 2016, the first British man in 77 years.",
+      "name": "Andy Murray"
+    },
+    {
+      "achievement": "23-time Grand Slam women's champion and world number one for many years.",
+      "name": "Serena Williams"
+    },
+    {
+      "achievement": "Australian Open champion who spent long periods as world number one.",
+      "name": "Ashleigh Barty"
+    },
+    {
+      "achievement": "WTA star who won two major titles and reached world number one.",
+      "name": "Simona Halep"
+    },
+    {
+      "achievement": "US Open winner at 19 years old in 2021, surprising the tennis world.",
+      "name": "Emma Raducanu"
+    },
+    {
+      "achievement": "Winner of the ATP Finals and US Open finalist in 2020.",
+      "name": "Daniil Medvedev"
+    }
+  ],
+
+  "athletics": [
+    {
+      "achievement": "World record holder in both the 100m (9.58) and 200m (19.19).",
+      "name": "Usain Bolt"
+    },
+    {
+      "achievement": "Olympic 100m champion in Tokyo 2021 with a stunning victory.",
+      "name": "Elaine Thompson-Herah"
+    },
+    {
+      "achievement": "World champion in the 200m in 2019 and one of the fastest men in history.",
+      "name": "Noah Lyles"
+    },
+    {
+      "achievement": "World 100m champion in 2019 with a time of 9.76 seconds.",
+      "name": "Christian Coleman"
+    },
+    {
+      "achievement": "Olympic 100m gold medalist in 2004 and a former world champion.",
+      "name": "Justin Gatlin"
+    },
+    {
+      "achievement": "Jamaican sprinter, Olympic and World champion in the 100m.",
+      "name": "Shelly-Ann Fraser-Pryce"
+    },
+    {
+      "achievement": "Won Olympic 200m title at age 17 in 2008.",
+      "name": "Veronica Campbell-Brown"
+    },
+    {
+      "achievement": "2023 World 100m champion known for her speed and style.",
+      "name": "Sha'Carri Richardson"
+    },
+    {
+      "achievement": "Olympic 100m and 200m champion in 2016 for Jamaica.",
+      "name": "Elaine Thompson"
+    },
+    {
+      "achievement": "American sprinter who won the women's 200m at the 2022 World Championships.",
+      "name": "Shericka Jackson"
+    }
+  ]
+}
