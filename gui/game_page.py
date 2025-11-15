@@ -323,16 +323,57 @@ class GamePage(ctk.CTkFrame):
             "date_time": datetime.now().strftime("%Y-%m-%d %H:%M")
         }
 
-        # Safe JSON load
+        # CHAMPION CHECK
+        # =====================
+        try:
+            with open("data/champion.json", "r") as f:
+                champion = json.load(f)
+
+            # Auto-repair if champion is not a dict (e.g. list or invalid)
+            if not isinstance(champion, dict):
+                champion = {"score": 0}
+
+        except (json.JSONDecodeError, FileNotFoundError):
+            champion = {"score": 0}  # default champion
+
+        # Compare with current champion
+        if self.total_score > champion.get("score", 0):
+            new_champion = {
+                "champion_name": self.player_name,
+                "score": self.total_score,
+                "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                "categories": self.selected_categories,
+                "correct_answers": self.correct_count,
+                "total_questions": self.total_questions,
+                "hints_used": self.hints_used
+            }
+
+            # Save new champion
+            with open("data/champion.json", "w") as f:
+                json.dump(new_champion, f, indent=4)
+
+            messagebox.showinfo(
+                "New Champion!",
+                "🎉 Congratulations! You are the new champion!"
+            )
+
+
+        # =====================
+        # SAVE GAME SESSION HISTORY
+        # =====================
         try:
             with open("data/players.json", "r") as f:
                 players = json.load(f)
         except (json.JSONDecodeError, FileNotFoundError):
-            players = []  # auto-fix
+            players = []  # auto-repair
 
         players.append(summary_data)
 
         with open("data/players.json", "w") as f:
             json.dump(players, f, indent=4)
 
+        # =====================
+        # Show Summary Screen
+        # =====================
         self.master.show_summary(summary_data)
+

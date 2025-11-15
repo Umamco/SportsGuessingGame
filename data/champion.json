@@ -1,0 +1,13 @@
+{
+    "champion_name": "cat togu",
+    "score": 44,
+    "date": "2025-11-15 12:24",
+    "categories": {
+        "tennis": true,
+        "premier": true,
+        "athletics": false
+    },
+    "correct_answers": 5,
+    "total_questions": 5,
+    "hints_used": 1
+}

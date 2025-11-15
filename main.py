@@ -1,72 +1,106 @@
 import customtkinter as ctk
-from gui.registration_page import RegistrationPage
-from gui.category_page import CategoryPage
-from gui.game_page import GamePage
-from gui.summary_page import SummaryPage
+from gui.home_page import HomePage
 
 
-class NameGuessingApp(ctk.CTk):
+class App(ctk.CTk):
+
     def __init__(self):
         super().__init__()
 
-        self.title("Sports Name Guessing Game")
-        self.geometry("700x600")
-
-        # Default appearance until player chooses
-        ctk.set_appearance_mode("dark")
+        # -----------------------------
+        # WINDOW SETTINGS
+        # -----------------------------
+        self.title("Name Guessing Game")
+        self.geometry("750x800")
+        self.resizable(False, True)
 
         self.current_frame = None
 
-        # Start with registration
-        self.show_registration()
+        # -----------------------------
+        # START WITH HOME PAGE
+        # -----------------------------
+        self.show_home()
+
+    # ============================================================
+    # NAVIGATION METHODS
+    # ============================================================
+
+    def clear_frame(self):
+        """Destroy current frame safely."""
+        if self.current_frame is not None:
+            self.current_frame.destroy()
+            self.current_frame = None
 
     # -----------------------------
-    # Show registration screen
+    # HOME PAGE
+    # -----------------------------
+    def show_home(self):
+        self.clear_frame()
+        self.current_frame = HomePage(self)
+        self.current_frame.pack(fill="both", expand=True)
+
+    # -----------------------------
+    # REGISTRATION PAGE
     # -----------------------------
     def show_registration(self):
-        if self.current_frame:
-            self.current_frame.destroy()
-
-        self.current_frame = RegistrationPage(
-            self,
-            switch_to_categories=self.show_categories
-        )
+        self.clear_frame()
+        from gui.registration_page import RegistrationPage
+        self.current_frame = RegistrationPage(self)
         self.current_frame.pack(fill="both", expand=True)
 
     # -----------------------------
-    # Show category selection
+    # CATEGORY PAGE
     # -----------------------------
     def show_categories(self, player_name):
-        if self.current_frame:
-            self.current_frame.destroy()
-
-        self.current_frame = CategoryPage(
-            self,
-            player_name=player_name
-        )
+        self.clear_frame()
+        from gui.category_page import CategoryPage
+        self.current_frame = CategoryPage(self, player_name)
         self.current_frame.pack(fill="both", expand=True)
 
     # -----------------------------
-    # Show game page
+    # GAME PAGE
     # -----------------------------
-    def show_game(self, settings: dict):
-        if self.current_frame:
-            self.current_frame.destroy()
-
+    def show_game(self, settings):
+        self.clear_frame()
+        from gui.game_page import GamePage
         self.current_frame = GamePage(self, settings)
         self.current_frame.pack(fill="both", expand=True)
 
     # -----------------------------
-    # Show summary page
+    # SUMMARY PAGE
     # -----------------------------
-    def show_summary(self, summary_data: dict):
-        if self.current_frame:
-            self.current_frame.destroy()
-
-        self.current_frame = SummaryPage(self, summary_data)
+    def show_summary(self, data):
+        self.clear_frame()
+        from gui.summary_page import SummaryPage
+        self.current_frame = SummaryPage(self, data)
         self.current_frame.pack(fill="both", expand=True)
 
+    # -----------------------------
+    # PLAYERS HISTORY PAGE
+    # -----------------------------
+    def show_players_history(self):
+        self.clear_frame()
+        from gui.players_history_page import PlayersHistoryPage
+        self.current_frame = PlayersHistoryPage(self)
+        self.current_frame.pack(fill="both", expand=True)
 
+    # -----------------------------
+    # BACK NAVIGATION (used by many pages)
+    # -----------------------------
+    def back_to_home(self):
+        self.show_home()
+
+    def back_to_categories(self, player_name=None):
+        # If name not passed, fall back to previously stored name
+        if player_name:
+            self.show_categories(player_name)
+        else:
+            self.show_home()
+
+
+# ============================================================
+# RUN APPLICATION
+# ============================================================
 if __name__ == "__main__":
-    app = NameGuessingApp()
+    app = App()
     app.mainloop()
