@@ -1,0 +1,41 @@
+import customtkinter as ctk
+
+class NavBar(ctk.CTkFrame):
+    def __init__(self, master):
+        super().__init__(master)
+
+        self.master = master
+
+        # Full-width bar settings
+        self.configure(height=60)
+        self.pack_propagate(False)
+
+        # -------------------------
+        # Buttons (Left → Right)
+        # -------------------------
+        home_btn = ctk.CTkButton(
+            self,
+            text="🏠 Home",
+            width=120,
+            height=40,
+            command=self.master.back_to_home
+        )
+        home_btn.pack(side="left", padx=10, pady=10)
+
+        start_btn = ctk.CTkButton(
+            self,
+            text="🎮 Start Game",
+            width=140,
+            height=40,
+            command=self.master.show_registration
+        )
+        start_btn.pack(side="left", padx=10, pady=10)
+
+        history_btn = ctk.CTkButton(
+            self,
+            text="📘 History",
+            width=120,
+            height=40,
+            command=self.master.show_players_history
+        )
+        history_btn.pack(side="left", padx=10, pady=10)
