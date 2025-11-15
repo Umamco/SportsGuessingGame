@@ -1,198 +1,203 @@
 # 🏆 Sports Legends Name Guessing Game
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![CustomTkinter](https://img.shields.io/badge/CustomTkinter-UI%20Framework-brightgreen)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+A modern and interactive quiz game where players guess the names of
+iconic sports legends from **Tennis**, **Premier League Football**, and
+**Athletics**.\
+The game features timed challenges, hints, a champion system, detailed
+player history analytics, and a clean CustomTkinter user interface.
 
-A modern, intelligent quiz game where players guess the names of iconic sports legends from **Tennis**, **Premier League Football**, and **Athletics**.  
-The game includes timed challenges, hints, champion recording, and a full analytics page with history, filtering, live search, and sorting.
-
----
+------------------------------------------------------------------------
 
 ## 📸 Screenshots
 
-> **Replace placeholder image paths with your own**  
-> (e.g., `/screenshots/home.png`, `/screenshots/history.png`)
+> These screenshots represent the design and layout of the game.\
+> Your interface may differ slightly until you complete all pending
+> refinements.\
+> The final preview image shows the *ideal look* you are working toward.
 
 ### 🏠 Home Page
+
 ![Home Page](screenshots/start.png)
 
 ### 📝 Player Registration
+
 ![Registration](screenshots/register.png)
 
-## 
+### ⚙️ Game Options & Categories
+
 ![Game Options](screenshots/options.png)
 
 ### 🎯 Guessing Game
+
 ![Game Page](screenshots/game.png)
 
+### 🟢 Results
 
-![Game Page](screenshots/result.png)
+![Game Result](screenshots/result.png)
 
-![Game Options](screenshots/filter.png)
+### 🧮 Filters & Sorting
+
+![Filters](screenshots/filter.png)
 
 ### 📊 Players History & Analytics
+
 ![History Page](screenshots/history.png)
 
----
+### ⭐ Final UI Preview (Work In Progress)
+
+![Future Layout](screenshots/finished.png)
+
+------------------------------------------------------------------------
 
 ## 🎮 Features
 
-### 🧩 Core Gameplay
-- Guess full names of sports legends.
-- Timer per question (**120 seconds**).
-- Smart Hint System:
-  - Reveal 1st letter (–2 points)
-  - Reveal 2 letters (–4 points)
-  - Reveal half the name (–6 points)
+### 🧩 Gameplay
 
-### 🏆 Champion System
-- Automatic tracking of the **all-time highest scorer**
-- Stores:
-  - Player Name  
-  - Score  
-  - Categories  
-  - Date  
-  - Correct Answers  
-  - Total Questions  
-  - Hints Used  
+-   Guess full names of sports icons.
+-   Timer per question (**120 seconds**).
+-   Smart Hint System:
+    -   Reveal first letter (--2 points)\
+    -   Reveal two letters (--4 points)\
+    -   Reveal half the name (--6 points)
+
+### 🏆 Champion Tracking
+
+Automatically records: - Highest Score\
+- Player Name\
+- Categories Played\
+- Correct Answers\
+- Total Questions\
+- Hints Used\
+- Date and Time
 
 ### 📊 Player History & Analytics
-Includes:
-- 🔍 Live search  
-- ↕ Sorting (Recent, Highest Score, Alphabetical)  
-- 🎛 Filters:
-  - Categories  
-  - Score range  
-  - Hint usage  
-  - Date range  
-- Scrollable card-style layout  
 
-### 🎨 UI Experience
-- Dark / Light / System themes  
-- Modern CustomTkinter widget styling  
-- Smooth navigation flow  
+Includes: - Live Search\
+- Sorting (Recent, Score, A--Z)\
+- Filters:\
+- Categories\
+- Score Range\
+- Hints Used\
+- Date Range\
+- Scrollable card-style history layout
 
----
+### 🎨 UI & Experience
+
+-   Light / Dark / System themes\
+-   Smooth page navigation\
+-   Modern CustomTkinter widgets
+
+------------------------------------------------------------------------
 
 ## 📁 Project Structure
 
-```
-NameGuessingGame/
-│── main.py
-│── gui/
-│   ├── home_page.py
-│   ├── registration_page.py
-│   ├── category_page.py
-│   ├── game_page.py
-│   ├── summary_page.py
-│   └── players_history_page.py
-│── data/
-│   ├── players.json
-│   ├── champion.json
-│   └── questions.json
-└── README.md
-```
+    NameGuessingGame/
+    │── main.py
+    │── gui/
+    │   ├── home_page.py
+    │   ├── registration_page.py
+    │   ├── category_page.py
+    │   ├── game_page.py
+    │   ├── summary_page.py
+    │   └── players_history_page.py
+    │── data/
+    │   ├── questions.json
+    │   ├── players.json
+    │   └── champion.json
+    └── README.md
 
----
+------------------------------------------------------------------------
 
 ## ▶️ How to Run
 
 ### 1. Clone the repository
-```bash
+
+``` bash
 git clone https://github.com/Umamco/NameGuessingGame.git
 ```
 
-### 2. Install Dependencies
-```bash
+### 2. Install Required Package
+
+``` bash
 pip install customtkinter
 ```
 
-### 3. Run the Game
-```bash
+### 3. Start the Game
+
+``` bash
 python main.py
 ```
 
----
+------------------------------------------------------------------------
 
-## 🪟 Setup Instructions (Per Operating System)
+## 🪟 Setup Instructions
 
-### **Windows**
-1. Ensure Python is installed (Run `python --version`).
-2. Install CustomTkinter:
-   ```bash
-   pip install customtkinter
-   ```
-3. Double-click **main.py** *or* run:
-   ```bash
-   python main.py
-   ```
+### Windows
 
-### **macOS**
-```bash
-brew install python
+``` bash
+pip install customtkinter
+python main.py
+```
+
+### macOS
+
+``` bash
 pip3 install customtkinter
 python3 main.py
 ```
 
-### **Linux (Ubuntu/Debian)**
-```bash
-sudo apt install python3 python3-pip -y
+### Linux
+
+``` bash
 pip3 install customtkinter
 python3 main.py
 ```
 
----
+------------------------------------------------------------------------
 
-## 📚 Categories Covered
+## 📚 Categories Included
 
-### 🎾 **Tennis**
-- Champions, finalists, era 2000 – Present
+### 🎾 Tennis
 
-### ⚽ **Premier League**
-- Top scorers, title winners, famous players
+Grand Slam champions and finalists (2000--Present)
 
-### 🏃 **Athletics (100m & 200m)**
-- Olympic & World Champions since 2000
+### ⚽ Premier League
 
----
+Top scorers, title winners, elite players (2000--Present)
 
-## 👑 Champion Data Location
+### 🏃 Athletics (100m & 200m)
 
-```
-data/champion.json
-```
+Olympic and World Champions (2000--Present)
 
-Automatically updated whenever a player beats the current champion.
+------------------------------------------------------------------------
 
----
+## 🗂 Data Files
 
-## 🗂 Player History Data Location
-```
-data/players.json
-```
-Contains every game session played.
+### Champion Data
 
----
+`data/champion.json`
 
-## 🚀 Future Improvements (Planned)
-- Add Basketball & Boxing categories  
-- Add picture-based hints  
-- Multiplayer mode  
-- Online leaderboard  
-- Export history as CSV  
+### Player History
 
----
+`data/players.json`
 
-## 📜 License
+### Questions Database
 
-This project is licensed under the **MIT License**.  
-See the `LICENSE` file for details.
+`data/questions.json`
 
----
+------------------------------------------------------------------------
+
+## 🚀 Future Enhancements
+
+-   Boxing & Basketball categories\
+-   Picture-based hints\
+-   Multiplayer mode\
+-   Online global leaderboard\
+-   Export match history to CSV
+
+------------------------------------------------------------------------
 
 ## ✨ Author
 
-**Amin Umar (alias: Jack)**  
-Python Developer & Sports Knowledge Enthusiast
-
+**Amin Umar (Jack)**\
+Python Developer \| Sports Enthusiast
