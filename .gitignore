@@ -31,4 +31,4 @@ Thumbs.db
 desktop.ini
 
 # Data files that should not be in version control
-data/players.json
+# data/players.json
